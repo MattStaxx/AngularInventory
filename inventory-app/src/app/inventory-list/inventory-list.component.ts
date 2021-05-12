@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../shared/product.model';
 
 @Component({
   selector: 'app-inventory-list',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-list.component.css']
 })
 export class InventoryListComponent implements OnInit {
-
+  products: Product[] = [
+    new Product('Fire starting kit', 2),
+    new Product('Sleeping bag', 1)
+  ];
+  
   constructor() { }
 
   ngOnInit(): void {
