@@ -11,7 +11,6 @@ export class CatalogListComponent implements OnInit {
     new Package('A test package', 'Just testing', '../assets/skincare.png'),
     new Package('A test package', 'Just testing', '../assets/skincare.png')
   ];
-
   constructor() { }
 
   ngOnInit(): void {
