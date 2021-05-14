@@ -17,4 +17,7 @@ export class InventoryListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onProductAdded(product: Product) {
+    this.products.push(product);
+  }
 }
