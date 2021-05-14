@@ -7,16 +7,17 @@ import { Package } from '../../package.model';
   styleUrls: ['./catalog-item.component.css']
 })
 export class CatalogItemComponent implements OnInit {
-  @Input() package: Package;
+  @Input() pack: Package;
   
-  @Output() featureSelected = new EventEmitter<string>();
-  onSelect(feature: string) {
-      this.featureSelected.emit(feature);
-  }
+  @Output() packSelected = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelected() {
+    this.packSelected.emit();
   }
 
 }

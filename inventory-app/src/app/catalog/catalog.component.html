@@ -1,8 +1,14 @@
 <div class="row">
     <div class="col-md-5">
-        <app-catalog-list></app-catalog-list>
+        <app-catalog-list
+            (packageWasSelected)="selectedPackage = $event"></app-catalog-list>
     </div>
     <div class="col-md-7">
-        <app-catalog-detail></app-catalog-detail>
+        <app-catalog-detail
+            *ngIf="selectedPackage; else infoText"
+            [pack]="selectedPackage"></app-catalog-detail>
+        <ng-template #infoText>
+            <p>Please select a Package!</p>
+        </ng-template>
     </div>
 </div>

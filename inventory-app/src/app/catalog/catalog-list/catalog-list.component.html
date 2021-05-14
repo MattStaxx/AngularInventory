@@ -5,6 +5,7 @@
     <div class="col-xs-12">
         <app-catalog-item
             *ngFor="let packageElem of packages"
-            [package]="packageElem"></app-catalog-item>
+            [pack]="packageElem"
+            (packSelected)="onPackSelected(packageElem)"></app-catalog-item>
     </div>
 </div>

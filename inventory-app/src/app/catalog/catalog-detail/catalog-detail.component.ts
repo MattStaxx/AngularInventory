@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Package } from '../package.model';
 
 @Component({
   selector: 'app-catalog-detail',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalog-detail.component.css']
 })
 export class CatalogDetailComponent implements OnInit {
-
+  @Input() pack: Package;
   constructor() { }
 
   ngOnInit(): void {
