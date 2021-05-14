@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../shared/product.model';
+import { InventoryListService } from './inventoy-list.service';
 
 @Component({
   selector: 'app-inventory-list',
@@ -7,17 +8,18 @@ import { Product } from '../shared/product.model';
   styleUrls: ['./inventory-list.component.css']
 })
 export class InventoryListComponent implements OnInit {
-  products: Product[] = [
-    new Product('Fire starting kit', 2),
-    new Product('Sleeping bag', 1)
-  ];
+  products: Product[];
   
-  constructor() { }
+  constructor(private invServ: InventoryListService) { }
 
   ngOnInit(): void {
-  }
+    this.products = this.invServ.getProducts();
+    this.invServ.productsChanged
+    .subscribe(
+      (products: Product[]) => {
+        this.products = products;
+      }
+    )
 
-  onProductAdded(product: Product) {
-    this.products.push(product);
   }
 }

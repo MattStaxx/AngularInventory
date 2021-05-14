@@ -11,6 +11,8 @@ import { CatalogDetailComponent } from './catalog/catalog-detail/catalog-detail.
 import { CatalogItemComponent } from './catalog/catalog-list/catalog-item/catalog-item.component';
 import { InventoryListComponent } from './inventory-list/inventory-list.component';
 import { InventoryEditComponent } from './inventory-list/inventory-edit/inventory-edit.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { InventoryListService } from './inventory-list/inventoy-list.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { InventoryEditComponent } from './inventory-list/inventory-edit/inventor
     CatalogListComponent,
     CatalogDetailComponent,
     CatalogItemComponent,
+    DropdownDirective,
     InventoryListComponent,
     InventoryEditComponent
   ],
@@ -28,7 +31,7 @@ import { InventoryEditComponent } from './inventory-list/inventory-edit/inventor
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [InventoryListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

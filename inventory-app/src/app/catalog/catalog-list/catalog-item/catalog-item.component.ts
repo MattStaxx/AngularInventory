@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CatalogService } from '../../catalog.service';
 import { Package } from '../../package.model';
 
 @Component({
@@ -8,16 +9,14 @@ import { Package } from '../../package.model';
 })
 export class CatalogItemComponent implements OnInit {
   @Input() pack: Package;
-  
-  @Output() packSelected = new EventEmitter<void>();
 
-  constructor() { }
+  constructor(private catalogService: CatalogService) { }
 
   ngOnInit(): void {
   }
 
   onSelected() {
-    this.packSelected.emit();
+    this.catalogService.packageSelected.emit(this.pack);
   }
 
 }
