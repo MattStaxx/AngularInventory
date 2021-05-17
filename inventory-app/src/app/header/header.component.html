@@ -6,14 +6,14 @@
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#" (click)="onSelect('catalog')">Products</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#" (click)="onSelect('inventory-list')">Inventory List</a></li>
+                <li routerLinkActive="active"><a  class="nav-link active" routerLink="/packages">Products</a></li>
+                <li routerLinkActive="active"><a class="nav-link active" routerLink="/inventory-list">Inventory List</a></li>
             </ul>
             <div class="uib-dropdown" appDropdown>
-                <a class="nav-link dropdown-toggle navbar-brand" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="uib-dropdown" aria-expanded="false">Manage<span class="caret"></span></a>
+                <a class="nav-link dropdown-toggle navbar-brand" style="cursor: pointer" role="button" id="dropdownMenuLink" data-bs-toggle="uib-dropdown" aria-expanded="false">Manage<span class="caret"></span></a>
                 <ul class="uib-dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="uib-dropdown-item" href="#">Save Data</a></li>
-                    <li><a class="uib-dropdown-item" href="#">Fetch Data</a></li>
+                    <li><a class="uib-dropdown-item" style="cursor: pointer">Save Data</a></li>
+                    <li><a class="uib-dropdown-item" style="cursor: pointer">Fetch Data</a></li>
                 </ul>
             </div>
         </div>

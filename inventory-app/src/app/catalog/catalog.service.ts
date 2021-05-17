@@ -35,4 +35,8 @@ export class CatalogService {
   addProductsToInventoryList(products: Product[]) {
     this.invServ.addProducts(products);
   }
+
+  getPackage(index: number) {
+    return this.packages[index];
+  }
 }

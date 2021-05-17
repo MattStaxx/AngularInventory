@@ -14,6 +14,7 @@ import { InventoryEditComponent } from './inventory-list/inventory-edit/inventor
 import { DropdownDirective } from './shared/dropdown.directive';
 import { InventoryListService } from './inventory-list/inventoy-list.service';
 import { AppRoutingModule } from './app-routing.module';
+import { CatalogStartComponent } from './catalog/catalog-start/catalog-start.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
     CatalogItemComponent,
     DropdownDirective,
     InventoryListComponent,
-    InventoryEditComponent
+    InventoryEditComponent,
+    CatalogStartComponent
   ],
   imports: [
     BrowserModule,

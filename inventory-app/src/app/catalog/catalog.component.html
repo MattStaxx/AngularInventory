@@ -3,11 +3,6 @@
         <app-catalog-list></app-catalog-list>
     </div>
     <div class="col-md-7">
-        <app-catalog-detail
-            *ngIf="selectedPackage; else infoText"
-            [pack]="selectedPackage"></app-catalog-detail>
-        <ng-template #infoText>
-            <p>Please select a Package!</p>
-        </ng-template>
+        <router-outlet></router-outlet>
     </div>
 </div>
