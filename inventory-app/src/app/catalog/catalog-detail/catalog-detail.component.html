@@ -14,15 +14,15 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <div 
-            class="btn-group">
-            <button 
+        <div class="btn-group uib-dropdown"
+            >
+            <button appDropdown
                 type="button"
-                class="btn btn-primary dropdown-toggle">
+                class="btn btn-primary uib-dropdown-toggle">
                 Manage Package<span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Add Item</a></li>
+            <ul class="uib-dropdown-menu">
+                <li><a (click)="onAddToInvetoryList()" style="cursor: pointer;">Add Item</a></li>
                 <li><a href="#">Edit Package</a></li>
                 <li><a href="#">Delete Package</a></li>
             </ul>
@@ -36,6 +36,12 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        Items
+        <ul class="list-group">
+            <li 
+                class="list-group-item"
+                *ngFor="let product of pack.products">
+                {{ product.name }} - {{ product.amount }}
+            </li>
+        </ul>
     </div>
 </div>

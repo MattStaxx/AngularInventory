@@ -13,6 +13,7 @@ import { InventoryListComponent } from './inventory-list/inventory-list.componen
 import { InventoryEditComponent } from './inventory-list/inventory-edit/inventory-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { InventoryListService } from './inventory-list/inventoy-list.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InventoryListService } from './inventory-list/inventoy-list.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [InventoryListService],
   bootstrap: [AppComponent]

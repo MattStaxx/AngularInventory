@@ -19,7 +19,6 @@ export class InventoryListComponent implements OnInit {
       (products: Product[]) => {
         this.products = products;
       }
-    )
-
+    );
   }
 }

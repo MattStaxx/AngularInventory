@@ -16,4 +16,9 @@ export class InventoryListService {
         this.products.push(product);
         this.productsChanged.emit(this.products.slice());
     }
+
+    addProducts(products: Product[]) {
+        this.products.push(...products);
+        this.productsChanged.emit(this.products.slice());
+    }
 }
