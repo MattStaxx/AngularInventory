@@ -8,6 +8,7 @@ import { Package } from '../../package.model';
 })
 export class CatalogItemComponent implements OnInit {
   @Input() pack: Package;
+  @Input() index: number;
 
   ngOnInit(): void {
   }

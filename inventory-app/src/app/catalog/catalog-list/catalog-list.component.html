@@ -4,7 +4,8 @@
     </div>
     <div class="col-xs-12">
         <app-catalog-item
-            *ngFor="let packageElem of packages"
-            [pack]="packageElem"></app-catalog-item>
+            *ngFor="let packageElem of packages; let i = index"
+            [pack]="packageElem"
+            [index]="i"></app-catalog-item>
     </div>
 </div>
