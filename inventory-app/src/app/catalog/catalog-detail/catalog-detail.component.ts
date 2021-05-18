@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CatalogService } from '../catalog.service';
 import { Package } from '../package.model';
 
@@ -13,7 +13,8 @@ export class CatalogDetailComponent implements OnInit {
   id: number;
   
   constructor(private catalogService: CatalogService,
-              private route: ActivatedRoute) { 
+              private route: ActivatedRoute,
+              private router: Router) { 
           
   }
 
@@ -31,4 +32,7 @@ export class CatalogDetailComponent implements OnInit {
     this.catalogService.addProductsToInventoryList(this.pack.products); 
   }
 
+  onEditPackage() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
+  }
 }

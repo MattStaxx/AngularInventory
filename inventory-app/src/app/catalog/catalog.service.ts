@@ -21,8 +21,8 @@ export class CatalogService {
       'Essentials for what if scenarios...', 
       '../assets/skincare.png',
       [
-        new Product('Flint & Stiker', 1),
-        new Product('Space Balnket', 2),
+        new Product('Flint & Striker', 1),
+        new Product('Space Blanket', 2),
       ])
   ];
 
@@ -38,5 +38,9 @@ export class CatalogService {
 
   getPackage(index: number) {
     return this.packages[index];
+  }
+
+  addNewPackage() {
+
   }
 }
