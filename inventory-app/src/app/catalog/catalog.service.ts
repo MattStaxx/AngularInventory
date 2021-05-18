@@ -1,11 +1,12 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 import { InventoryListService } from "../inventory-list/inventoy-list.service";
 import { Product } from "../shared/product.model";
 import { Package } from "./package.model";
 
 @Injectable()
 export class CatalogService {
-    packageSelected = new EventEmitter<Package>();
+    packageSelected = new Subject<Package>();
 
   private packages: Package[] = [
     new Package(

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogService } from './catalog.service';
-import { Package } from './package.model';
 
 @Component({
   selector: 'app-catalog',
@@ -9,16 +8,10 @@ import { Package } from './package.model';
   providers: [CatalogService]
 })
 export class CatalogComponent implements OnInit {
-  selectedPackage: Package;
 
-  constructor(private catalogService: CatalogService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.catalogService.packageSelected.subscribe(
-      (pack: Package) => {
-        this.selectedPackage = pack;
-      }
-    )
   }
 
 }
