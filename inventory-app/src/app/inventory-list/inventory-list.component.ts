@@ -22,6 +22,7 @@ export class InventoryListComponent implements OnInit, OnDestroy {
         this.products = products;
       }
     );
+    this.products.sort((a,b) => a.name > b.name ? 1 : -1)
   }
 
   ngOnDestroy(): void {

@@ -4,8 +4,9 @@ import { Product } from "../shared/product.model";
 export class InventoryListService {
     productsChanged = new Subject<Product[]>();
     private products: Product[] = [
-        new Product('Fire starting kit', 2),
-        new Product('Sleeping bag', 1)
+        new Product('Sleeping bag', 1),
+        new Product('Camp Stove', 1),
+        new Product('Fire starting kit', 2)
     ];
 
     getProducts() {
